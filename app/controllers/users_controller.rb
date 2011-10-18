@@ -85,7 +85,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to administrators_url }
+      format.html { redirect_to administrators_url, notice: 'User was successfully deleted.' }
       format.json { head :ok }
     end
   end
