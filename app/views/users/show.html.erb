@@ -14,11 +14,27 @@
   <b>Email address:</b>
   <%= @user.email %>
 </p>
+<div>
+<p>
+  <b>Post Count:</b>
+  <%= @postcount %>
+</p>
 
 <p>
-  <b>Password hash:</b>
-  <%= @user.encrypted_password %>
+  <b>Reply Count:</b>
+  <%= @replycount %>
 </p>
+</div>
+<p>
+  <b>Total Post Votes Earned:</b>
+  <%= @postvotesearned %>
+</p>
+
+<p>
+  <b>Total Reply Votes Earned:</b>
+  <%= @replyvotesearned %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

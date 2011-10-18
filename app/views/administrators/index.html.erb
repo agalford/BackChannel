@@ -11,7 +11,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><b>User ID:</b>
-            <%= user.user_code %>
+            <%= link_to "#{user.user_code}", 'users/' + (user.id).to_s %>
             <b>Admin?:</b>
             <%= user.is_admin.to_s %>
         </td>
@@ -29,4 +29,4 @@
 <br />
 
 <%= link_to 'Back to Posts', posts_path %>
-<%= link_to 'Create a New User', new_user_path %>
+

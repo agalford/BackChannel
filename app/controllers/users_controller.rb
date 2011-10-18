@@ -18,6 +18,22 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @postcount = Post.count_by_sql ["select count(id) from POSTS where user_id = ?", params[:id] ]
+    @replycount = Reply.count_by_sql ["select count(id) from REPLIES where user_id = ?", params[:id] ]
+    @posts = Post.find_all_by_user_id(params[:id])
+    @replies = Reply.find_all_by_user_id(params[:id])
+    @postvotesearned = 0
+    @replyvotesearned = 0
+    unless @posts.nil?
+      @posts.each do |pv|
+        @postvotesearned = @postvotesearned + pv.vote_count
+      end
+    end
+    unless @replies.nil?
+      @replies.each do |rv|
+        @replyvotesearned += rv.vote_count
+      end
+    end
 
     respond_to do |format|
       format.html # show.html.erb
