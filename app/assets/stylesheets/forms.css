@@ -1,0 +1,68 @@
+.bodyContent input, .bodyContent select{
+    border: 1px solid #dddfdf;
+    color: #666666;
+    padding: 5px;
+}
+
+.bodyContent input{
+    width: 288px;
+}
+
+.bodyContent select{
+    border: 1px solid #dddfdf;
+    padding: 5px;
+    width: 300px;
+}
+
+.bodyContent input.button{
+    background: #1F1F1F repeat-x;
+    background: -moz-linear-gradient(#3092da, #14619b);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3092da), to(#14619b));
+    border: 1px solid #1F1F1F;
+    border-radius: 3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    box-shadow: none;
+    color: #D4E6F4;
+    padding: 5px 14px;
+    text-shadow: 0 0 4px #000;
+    width: auto;
+}
+
+.bodyContent .fieldList li{
+    list-style-type: none;
+    list-style-position: outside;
+    overflow: hidden;
+}
+
+
+.bodyContent textarea{ 
+    border: 1px solid #dddfdf;
+    color: #666666;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    padding: 5px;
+    width: 288px;
+}
+
+/*Change when we have more form styles*/
+
+.search input[type=text]{
+    border: 1px solid #cccccc;
+    height: 22px;
+    background-color: #f3f3f3;
+    line-height: 22px;
+}
+
+.search input{
+    float: left;
+}
+
+.search #searchGFI{
+    width: 148px;
+    padding: 0 10px 0 10px;
+}
+
+.search .goButton{
+    position: relative;
+    left: -2px;
+}

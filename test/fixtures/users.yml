@@ -1,0 +1,56 @@
+one:
+  user_code: 1
+  first_name: MyString1
+  last_name: MyString1
+  created_at: 10-01-2011 12:00:00
+  updated_at: 10-02-2011 12:00:00
+  email: MyString1@string.com
+  encrypted_password: MyString1
+  is_admin: true
+
+two:
+  user_code: 2
+  first_name: MyString2
+  last_name: MyString2
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+  email: MyString2@string.com
+  encrypted_password: MyString2
+  is_admin: true
+
+three:
+  user_code: 3
+  first_name: MyString3
+  last_name: MyString3
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+  email: MyString3@string.com
+  encrypted_password: MyString3
+  is_admin: false
+
+noFirst:
+  user_code: 4
+  last_name: MyString4
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+  email: MyString4@string.com
+  encrypted_password: MyString4
+  is_admin: false
+
+noLast:
+  user_code: 5
+  first_name: MyString5
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+  email: MyString5@string.com
+  encrypted_password: MyString5
+  is_admin: false
+
+noEmail:
+  user_code: 6
+  first_name: MyString6
+  last_name: MyString6
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+  encrypted_password: MyString6
+  is_admin: false

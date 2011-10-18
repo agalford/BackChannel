@@ -1,0 +1,5 @@
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+en:
+  # TODO: Make the comments less cheeky
+  PostTooShort: "does not meet the minimum length"
+  AuthenticatedUser: "must be authenticated to perform that action"

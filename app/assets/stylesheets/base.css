@@ -1,0 +1,485 @@
+/*Common Classes*/
+td {
+    padding: 5px
+}
+
+.notice {
+    font-size: 11pt;
+    color: green;
+}
+
+.alert {
+    font-size: 11pt;
+    color: red;
+}
+
+th {
+    padding: 5px
+}
+
+.visibility-none {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+/*Standard Element Styles*/
+
+li {
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #408516;
+    outline: 0;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em.postInfo {
+    color: #666666
+}
+
+em {
+    font-style: italic;
+}
+
+/*Body Content Styles*/
+
+.bodyContent h2 {
+    font-size: 1.462em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.bodyContent h1 {
+    font-size: 2.000em;
+    font-weight: bold;    
+    line-height: 1.2em;
+    margin-bottom: 15px;
+}
+
+.bodyContent h3 {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-bottom: 8px;
+}
+
+.bodyContent ul {
+    margin-bottom: 20px;
+}
+
+.bodyContent form {
+    margin-bottom: 30px;
+}
+
+.bodyContent .floatRight {
+    float: right;
+}
+
+.bodyContent .floatLeft {
+    float: left;
+}
+
+/*Reusable  Styles*/
+
+.boldRedHeader {
+    color: #F62817;
+    font-weight: bold;
+}
+
+.redHeader, .redHeader a {
+    color: #F62817;
+    font-weight: normal;
+}
+
+.boldHeader {
+    font-weight: bold;
+}
+
+.headerWithImageLeft {
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.floatedList {
+    overflow: hidden;
+}
+
+.rightSeparator li {
+    border-right: 1px solid #1E1E1E;
+    padding: 0 6px 0 6px;
+}
+
+.rightSeparator li.last {
+    border-right: none;
+    padding: 0 0 0 6px;
+}
+
+.noBulletsList li {
+    list-style-type: none;
+    list-style-position: outside;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+
+ul.indented {
+    padding-left: 25px;
+}
+
+.borderHeader {
+    border-bottom: 1px solid #AEAEAE;
+    font-size: 1.385em;
+    line-height: 1.2em;
+    margin-bottom: 35px;
+    padding-bottom: 3px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.twoThirds img.floatLeft {
+    margin-right: 13px;
+}
+
+.twoThirds img.floatRight {
+    margin-left: 13px;
+}
+
+.imageWithBorder {
+    border: 1px solid #d4d4d4;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.center {
+    display: block;
+}
+
+.buttonArea {
+    text-align: right;
+}
+
+.imgButton {
+    vertical-align: top;
+}
+
+.noMarginBottom, .bodyContent .noMarginBottom {
+    margin-bottom: 0;
+}
+
+.leftIndendedContent {
+    margin-left: 15px;
+}
+
+.shadowTop {
+    background: transparent url("../images/soloutionShadow.png") no-repeat top center;
+    padding: 26px 10px 0 10px;
+}
+
+.imageReplacementHeader {
+    display: block;
+    outline: none;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+a.toggle {
+    cursor: pointer;
+}
+
+.largeTextLink{
+    color: #666;
+}
+
+.largeTextLink:hover, .largeTextLink:active{
+    color: #408516;
+}
+
+/*Call out*/
+
+.callout {
+    background: transparent url("../images/calloutBottom.png") bottom left no-repeat;
+    margin-bottom: 13px;
+    padding: 0 0 31px 0;
+    width: 266px;
+}
+
+.callout .top {
+    background: transparent url("../images/calloutTop.png") top left no-repeat;
+    display: block;
+    height: 15px;
+}
+
+.callout .inner {
+    background: transparent url("../images/calloutRepeat.png") top left repeat-y;
+    font-size: 1.154em;
+    line-height: 1.2em;
+    padding: 15px 13px 20px 13px;
+}
+
+.callout strong {
+    display: block;
+    line-height: 1.333em;
+    font-size: 1.333em;
+    margin: 0 0 7px 0;
+}
+
+.callout .redHeader {
+    padding-left: 10px;
+}
+
+.callout .headerWithImageLeft {
+    padding-left: 55px
+}
+
+/*General Layout*/
+
+html {
+    background-color: #A2A2A2;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    color: #666666;
+}
+
+body {
+    background: #CFCFCF url("background.png") no-repeat top center;
+    background-image:url('background.png');
+    font-size: 13px;
+    -moz-box-shadowtop: inset 0 0 20px #000000;
+    -webkit-box-shadow-top: inset 0 0 20px #000000;
+    box-shadow-top: inset 0 0 20px #000000;
+    line-height: 1.6em;
+}
+
+#container {
+    margin: 0 auto;
+    width: 950px;
+    position: relative;
+}
+
+#content {
+/*overflow: hidden;*/
+}
+
+/*Header*/
+
+#header {
+    position: relative;
+    margin: 25px 0 0 0;
+}
+
+#header .branding {
+    float: left;
+    margin: 16px 20px 0 0;
+    width: 70px;
+}
+
+/*Layout*/
+
+.columns {
+    overflow: hidden;
+}
+
+.column3, .column2, .column4 {
+    float: left;
+}
+
+.columns div.last, .columns li.last {
+    margin-right: 0;
+}
+
+.columns .row {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.columns .row.last, .overview .columns .row.last {
+    margin-bottom: 0;
+}
+
+.overview .columns .row {
+    margin-bottom: 42px;
+}
+
+.oneThird {
+    width: 300px;
+    float: left;
+}
+
+.twoThirds {
+    width: 600px;
+    float: left;
+}
+
+.twoThirds .column2 {
+    width: 238px;
+    margin-right: 32px;
+}
+
+.column2 {
+    margin-right: 55px;
+    width: 400px;
+}
+
+.column3 {
+    margin-right: 46px;
+    width: 254px;
+}
+
+/*Column Group*/
+
+.columnGroup {
+    clear: both;
+    display: inline-block;
+    background: transparent url("../images/columnGroupBottom.png") bottom center no-repeat;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.columnGroup.last {
+    background: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#content > .fullWidth {
+    margin-bottom: 40px;
+}
+
+.fullWidth {
+    background-color: #f7f7f7;
+    width: 856px;
+    border: 1px solid #aeaeae;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 46px;
+}
+
+/*Full Width Thirds*/
+
+.fullWidth div.left {
+    margin-right: 70px;
+}
+
+.fullWidth .oneThird {
+    width: 266px;
+}
+
+.fullWidth .twoThirds {
+    width: 520px;
+}
+
+/*Full Width Thirds overview*/
+
+.fullWidth.overview .twoThirds {
+    width: 575px
+}
+
+.fullWidth.overview .oneThird {
+    width: 198px;
+}
+
+.fullWidth.overview div.left {
+    margin-right: 77px;
+}
+
+.fullWidth.overview .column2.left {
+    margin-right: 45px;
+}
+
+/*Full Width Aggregator*/
+
+.fullWidth.aggregator .twoThirds {
+    width: 500px;
+    padding: 0 45px 0 10px;
+}
+
+.fullWidth.aggregator div.left {
+    margin-right: 82px;
+}
+
+.fullWidth.aggregator .oneThird {
+    width: 191px;
+    padding: 0 0 0 28px;
+}
+
+/*Banner Image*/
+
+.bannerImage {
+    display: block;
+    padding: 0 0 8px 0;
+    margin: 0 0 29px 0;
+    background: transparent url("../images/soloutionShadow.png") no-repeat bottom right;
+}
+
+.bannerImage a {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-color: transparent;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: none;
+    border: 1px solid #aeaeae;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    display: block;
+}
+
+.bannerImage .last {
+    margin: 0;
+}
+
+.nextToTabs {
+    padding-top: 10px;
+}

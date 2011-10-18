@@ -1,0 +1,32 @@
+<h1>Listing Administrator Status</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+    <% #@administrators.each do |administrator| %>
+    <% @users.each do |user| %>
+      <tr>
+        <td><b>User ID:</b>
+            <%= user.user_code %>
+            <b>Admin?:</b>
+            <%= user.is_admin.to_s %>
+        </td>
+        <td><%= link_to 'Edit Account', edit_user_path(user.id) %></td>
+        <% unless user.user_code == 'admin' %>
+            <td><%= link_to 'Delete User Account', 'users/' + user.id.to_s + '/destroy', confirm: 'Are you sure?', method: :delete %></td>
+        <% end %>
+        <% unless user.user_code == 'admin' || current_user.id == user.id-%>
+            <td><%= link_to 'Change Admin Role', :action => 'change_admin', :id => user.id %></td>
+        <% end %>
+      </tr>
+    <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to Posts', posts_path %>
+<%= link_to 'Create a New User', new_user_path %>

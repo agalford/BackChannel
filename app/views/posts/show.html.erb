@@ -1,0 +1,16 @@
+<h2>Viewing Post #<%= @post.id %> submitted by <%= User.find(@post.user_id).user_code %></h2>
+<p>
+  <b>Post text:</b>
+  <%= @post.post_text %>
+</p>
+
+<p>
+  <b>Vote count:</b>
+  <%= @post.vote_count %>
+  <b>Post by:</b>
+  <%= User.find( @post.user_id ).user_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts', posts_path %>

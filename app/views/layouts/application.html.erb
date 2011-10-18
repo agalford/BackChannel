@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backchannel</title>
+        <%= stylesheet_link_tag    "reset" %>
+        <%= stylesheet_link_tag    "application" %>
+        <%= stylesheet_link_tag    "base" %>
+        <%= stylesheet_link_tag    "footer" %>
+        <%= stylesheet_link_tag    "forms" %>
+        <%= javascript_include_tag "application" %>
+        <%= javascript_include_tag :all %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div id="container">
+            <div class="tabs fullWidthNavigationTabs ajax">
+                <div class="tabContainer bodyContent">
+                    <div class="tab fullWidth active clearfix">
+                        <ul class="hmenu">
+                            <%= render 'devise/menu/registration_items' %>
+                            <%= render 'devise/menu/login_items' %>
+                        </ul>
+                        <div id="search">
+                        <%= render 'posts/search' %>
+                        </div>
+                        <p class="notice"><%= notice %></p>
+                        <p class="alert"><%= alert %></p>
+                        <%= yield %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="content">
+                <div class="column">
+                    <strong>Created By:</strong>
+                    <ul>
+                        <li>Sterling Alexander</li>
+                        <li>Adam Alford</li>
+                    </ul>
+                </div>
+                <div class="column last">
+                    <span>Copyright &#169; 2011 NCSU&#46;</span>
+                    <ul class="footerNav">
+                        <li class="navItem"><a href="heroku.com" class="footer-link" rel="nofollow">Home</a></li>
+                        <li class="navItem"><a href="http://www.csc.ncsu.edu/faculty/efg/517/f11/" class="footer-link" rel="nofollow">CSC 517</a></li>
+                        <li class="navItem"><a href="https://github.com/agalford/BackChannel" class="footer-link" rel="nofollow">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

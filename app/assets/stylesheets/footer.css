@@ -1,0 +1,76 @@
+/*Footer*/
+
+#footer {
+    background: #A2A2A2 url("footerRepeat.jpg") top left repeat-x;
+    color: #1E1E1E;
+    border-top: 1px solid #6a6a6a;
+    padding: 15px 0 104px 0;
+}
+
+#footer .content {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#footer .column {
+    float: left;
+    margin-right: 30px;
+    overflow: hidden;
+}
+
+#footer .column p{
+    margin: 0;
+    padding: 0;
+}
+
+#footer .column.last {
+    margin: 0;
+    float: right;
+    width: 200px;
+}
+
+#footer li {
+    list-style-type: none;
+    list-style-position: outside;
+    font-size: 0.846em;
+    margin: 0 0 4px 0;
+}
+
+#footer a {
+    color: #1F1F1F;
+    text-decoration: none;
+}
+
+#footer strong {
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+    display: block;
+    text-shadow: 0 0 1px #000;
+    font-weight: normal;
+}
+
+#footer strong.none {
+    display: none;
+}
+
+#footer .footerNav {
+    float: right;
+    clear: both;
+}
+
+#footer .column.last span {
+    clear: both;
+    float: right;
+    margin: 0 0 4px 0;
+}
+
+#footer .footerNav {
+    line-height: 10px;
+}
+
+#footer .footerNav .navItem {
+    list-style-type: none;
+    list-style-position: inside;
+    text-align: right;
+}

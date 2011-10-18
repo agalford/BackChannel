@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  post_text: ThisIsMyText1
+  vote_count: 1
+  user_id: 1
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-02-2011 12:00:00
+
+two:
+  post_text: ThisIsMyText2
+  vote_count: 1
+  user_id: 2
+  created_at: 10-03-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+
+three:
+  post_text: ThisIsMyText3
+  vote_count: 2
+  user_id: 1
+  created_at: 10-04-2011 12:00:00
+  updated_at: 10-04-2011 12:00:00
+
+four:
+  post_text: ThisIsMyText4
+  vote_count: 0
+  user_id: 3
+  created_at: 10-04-2011 12:00:00
+  updated_at: 10-05-2011 12:00:00
+
+noText:
+  post_text:
+  vote_count: 0
+  user_id: 3
+  created_at: 10-04-2011 12:00:00
+  updated_at: 10-05-2011 12:00:00
+
+noUser:
+  post_text: ThisIsMyText6
+  vote_count: 0
+  user_id: 3
+  created_at: 10-04-2011 12:00:00
+  updated_at: 10-05-2011 12:00:00
+
+noVotes:
+  post_text: ThisIsMyText7
+  vote_count:
+  user_id: 3
+  created_at: 10-04-2011 12:00:00
+  updated_at: 10-05-2011 12:00:00

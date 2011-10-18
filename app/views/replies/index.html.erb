@@ -1,0 +1,27 @@
+<h1>Listing replies</h1>
+
+<table>
+  <tr>
+    <th>Reply text</th>
+    <th>Vote count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @replies.each do |reply| %>
+  <tr>
+    <td><%= reply.reply_text %></td>
+    <td><%= reply.vote_count %></td>
+    <td><%= link_to 'Show', reply %></td>
+    <% unless !current_user.id == reply.user_id %>
+        <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
+    <% end %>
+    <td><%= link_to 'Destroy', reply, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reply', new_reply_path %>

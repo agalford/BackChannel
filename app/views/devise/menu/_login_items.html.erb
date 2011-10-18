@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', "/sign_out", :method => :delete) %>
+  </li>
+  <% if current_user.is_admin? %>
+        <%=link_to('Admin Options', administrators_path) %>
+  <% end %>
+
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>
+  </li>
+<% end %>

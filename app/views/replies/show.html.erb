@@ -1,0 +1,46 @@
+<h2>Original Post #<%= @post.id %> submitted by <%= User.find(@post.user_id).user_code %></h2>
+
+<table id="table-style">
+  <thead>
+  <tr>
+    <th>Author:</th>
+    <th>Post Text:</th>
+  </tr>
+    </thead>
+  <tr>
+    <td><%= User.find(@post.user_id).user_code %></td>
+    <td><%= @post.post_text %></td>
+  </tr>
+</table>
+<h2>Replies</h2>
+<table id="table-style">
+    <thead>
+    <tr>
+    <th>Reply text</th>
+    <th>Reply Vote Count</th>
+  </tr>
+  </thead>
+  <% unless @reply.size == 0 %>
+    <% @reply.each do |replies| %>
+        <tr>
+        <td><%= replies.reply_text %></td>
+        <td><%= replies.vote_count %></td>
+        <% unless !user_signed_in? %>
+            <% unless !current_user.id == replies.user_id %>
+                <td><%= link_to 'Edit', edit_reply_path(replies) %></td>
+            <% end %>
+            <% unless current_user.id == replies.user_id %>
+               <td><%= link_to 'Vote', new_reply_vote_path(replies) %></td>
+            <% end %>
+            <% unless !current_user.is_admin? %>
+              <td><%= link_to 'Destroy', replies.id.to_s + '/destroy' , confirm: 'Are you sure?', :method => :delete %></td>
+            <% end %>
+         <% end %>
+        </tr>|
+    <% end %>
+  <% end %>
+</table>
+<%= link_to 'Back to Posts', posts_path %>
+<% unless !user_signed_in? %>
+    <%= link_to 'Add a Reply', new_reply_path(:id => params[:id]) %>
+<% end %>

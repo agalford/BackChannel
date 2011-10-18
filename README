@@ -1,0 +1,16 @@
+BackChannel Application
+CSC 517 Fall 2011
+North Carolina State University
+
+Sterling Alexander
+Adam Alford
+Shane Lardinois (Dropped the class)
+
+Link to Specs: 
+https://docs.google.com/a/ncsu.edu/document/d/1O0eZ0_iLjC64iSGoNZIVBpJRUdibgQH9MIGrZ8hSOE0/edit?hl=en_US
+
+To generate default admin user run 'rake bootstrap:all'
+
+    - This will create a default admin user.  To login use:
+        * Email:    admin@admin.com
+        * Pass:     pass

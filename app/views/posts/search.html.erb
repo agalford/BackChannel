@@ -1,0 +1,106 @@
+<li><%= link_to "Return to Posts Index", posts_path %></li>
+
+<h1>Search Results</h1>
+
+<h2>Results for Posts</h2>
+<table id="table-style">
+  <tr>
+    <th>Post text</th>
+    <th>Vote count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% unless @posts.nil? %>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to "#{post.post_text}", reply_path(post.id) %></td>
+        <td><%= post.vote_count %></td>
+        <% unless user_signed_in? -%>
+            <% # Do Nothing %>
+        <% else -%>
+            <% unless !user_signed_in? and !current_user.user_id == post.user_id-%>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Vote', new_post_vote_path(post) %></td>
+            <% end %>
+        </tr>
+        <% end %>
+    <% end %>
+<% end %>
+
+</table>
+
+<h2>Results for Replies to Post</h2>
+
+<table id="table-style">
+  <tr>
+    <th>Reply text</th>
+    <th>Vote count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% unless @replies.nil? %>
+    <% @replies.each do |reply| %>
+      <tr>
+        <td><%= link_to "#{reply.reply_text}", reply_path(reply.post_id)  %></td>
+        <td><%= reply.vote_count %></td>
+        <% unless user_signed_in? -%>
+            <% # Do Nothing %>
+        <% else -%>
+            <% unless !user_signed_in? and !current_user.user_id == post.user_id-%>
+                <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
+                <td><%= link_to 'Vote', new_reply_vote_path(reply) %></td>
+            <% end %>
+        </tr>
+        <% end %>
+    <% end %>
+<% end %>
+</table>
+
+<h2>Results by User Code</h2>
+
+<table id="table-style">
+  <tr>
+    <th>Post Text</th>
+    <th>Vote Count</th>
+    <th>User Code</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% puts "Size" %>
+<% puts @userPost.size %>
+  <% puts "String Representation" %>
+<% puts @userPost.to_s %>
+<% puts @userPost.class %>
+
+    <% @userPost.each do |upst| %>
+      <tr>
+        <% unless upst.nil? %>
+            <td><%= upst.post_text  %></td>
+            <td><%= upst.vote_count %></td>
+            <td><%= User.find(upst.user_id).user_code %></td>
+            <% unless user_signed_in? -%>
+                <% # Do Nothing %>
+            <% else -%>
+                <% unless !user_signed_in? and !current_user.user_id == post.user_id-%>
+                    <td><%= link_to 'Edit', edit_post_path(upst) %></td>
+                    <td><%= link_to 'Vote', new_post_vote_path(upst) %></td>
+                <% end %>
+            <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+</table>
+
+<br />
+<% unless user_signed_in? -%>
+  <li><%= link_to "Sign in", new_user_session_path %></li>
+  <li><%= link_to "Back to Posts", posts_path %></li>
+<% else -%>
+  <li><%= link_to 'New Post', new_post_path %></li>
+  <li><%= link_to "Sign out", destroy_user_session_path %></li>
+<% end %>

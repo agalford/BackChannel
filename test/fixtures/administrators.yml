@@ -1,0 +1,17 @@
+one:
+  user_id: 1
+  created_at: 10-02-2011 12:00:00
+  updated_at: 10-03-2011 12:00:00
+two:
+  user_id: 2
+  created_at: 10-03-2011 12:00:00
+  updated_at: 10-04-2011 12:00:00
+
+noUser:
+  created_at: 10-03-2011 12:00:00
+  updated_at: 10-04-2011 12:00:00
+
+noExist:
+  user_id: 245345
+  created_at: 10-03-2011 12:00:00
+  updated_at: 10-04-2011 12:00:00
