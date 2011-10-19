@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>User name</th>
+    <th>User Name</th>
     <th>First name</th>
     <th>Last name</th>
     <th>Email address</th>
@@ -18,15 +18,20 @@
     <td><%= user.last_name %></td>
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <% unless user.user_code == 'admin' %>
-        <td><%= link_to 'Destroy', 'users/' + user.id.to_s + '/destroy', :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if user_signed_in? %>
+        <% if User.find(current_user.id).user_code ==  user.user_code %>
+            <% unless user.user_code == 'admin' %>
+                <td><%= link_to 'Edit', edit_user_path(user) %></td>
+                <td><%= link_to 'Destroy', 'users/' + user.id.to_s + '/destroy', :confirm => 'Are you sure?', :method => :delete %></td>
+            <% end %>
+        <% end %>
     <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New User', new_user_path %>
+<% if user_signed_in? %>
+    <%= link_to 'New User', new_user_path %>
+<% end %>
 <%= link_to 'Return to Posts', posts_path %>

@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', "/sign_out", :method => :delete) %>
+  <%= link_to('Logout - ' + (User.find(current_user.id).user_code).to_s, "/sign_out", :method => :delete) %>
   </li>
   <% if current_user.is_admin? %>
         <%=link_to('Admin Options', administrators_path) %>
