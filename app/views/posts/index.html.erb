@@ -2,15 +2,16 @@
 
 <table id="table-style">
   <tr>
+    <th>User Name</th>
     <th>Post Text</th>
     <th>Vote Count</th>
     <th>Created On</th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
+    <td><%= User.find_by_id(post.user_id).user_code %></td>
     <td><%= link_to "#{post.post_text}", reply_path(post.id) %></td>
     <td><%= post.vote_count %></td>
     <td><%= post.created_at.to_date %></td>

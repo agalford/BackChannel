@@ -6,8 +6,10 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     date = DateTime.now.to_date
-    @posts.sort! { |a,b| (b.vote_count - (date - b.created_at.to_date)**1.5  <=>
-                              a.vote_count - (date - a.created_at.to_date)**1.5) }
+    puts date
+    puts "end of debug stuff"
+    @posts.sort! { |a,b| ( b.vote_count - ( date - b.created_at.to_date )  <=>
+                              a.vote_count - ( date - a.created_at.to_date ) ) }
     @replies = Array.new
     @posts.each do |post|
       @replies << Reply.where(:post_id => post.id)
